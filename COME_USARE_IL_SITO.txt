@@ -1,0 +1,70 @@
+========================================================================
+             G OPTIMIZER 2.0 • GUIDA AL SITO WEB UFFICIALE (V2 PRO)
+========================================================================
+
+Il sito web è stato completamente ampliato, potenziato e modernizzato per
+il lancio ufficiale in 2 settimane ("FRA DUE SETTIMANE È TUTTO ON").
+
+NUOVE SEZIONI E FUNZIONALITÀ AGGIUNTE:
+------------------------------------------------------------------------
+1. 🔥 TOP ANNOUNCEMENT BAR CON COUNTDOWN LIVE:
+   - Timer dinamico sincronizzato a 14 giorni (giorni, ore, minuti, secondi).
+   - Badge animato a impulsi verdi e pulsante di pre-ordine rapido.
+
+2. 🎮 VETRINA GIOCHI CON COPERTINE VERTICALI (3:4 POSTER):
+   - FiveM / GTA V: 100% PC-Check Safe, +45-65 FPS, 0.500 ms Lock
+   - Fortnite: Zero Input Lag, +60-85 FPS, -76% Delay
+   - Counter-Strike 2: Sub-Tick Accuracy, MSI Mode, +50-70 FPS
+   - Valorant: Riot Vanguard Compliant, +55-80 FPS, -75% Delay
+   - Warzone: Standby List Auto-Flush, Texture Streaming, +35-50 FPS
+
+3. 📱 DASHBOARD REMOTA WEB (KILLER FEATURE ZERO ALT-TAB):
+   - Mockup 3D dello smartphone interattivo con visualizzazione in tempo reale
+     di FPS, CPU/GPU Temp, RAM e risoluzione timer.
+   - Pulsante test interattivo "Pulisci RAM Standby Ora" con animazione flush.
+
+4. 🛡️ TABELLA CONFORMITÀ PC-CHECK FIVEM & SCREENSHARE AUDIT:
+   - Confronto dettagliato tra gli optimizer scadenti da YouTube/Discord
+     (che fanno bannare su Echo/Devour disabilitando servizi) e G Optimizer
+     (che preserva al 100% DPS, BAM, SysMain, EventLog).
+
+5. ⚡ CATALOGO TWEAK INTERATTIVO (130+ TWEAKS):
+   - Filtri a pillola: Tutti, CPU & Latenza, GPU & Display, Rete & Ping,
+     RAM & Pulizia, FiveM & Anti-Cheat.
+   - Barra di ricerca istantanea con filtro in tempo reale.
+
+6. 📥 BOX DOWNLOAD DIRETTO 1-CLICK:
+   - Download immediato del pacchetto ufficiale "GOptimizer_V2.zip".
+   - Guida rapida in 3 step: Scarica -> Avvia GOptimizer.exe -> Premi Formula 1.
+
+7. 🎨 DESIGN SYSTEM CYBER OBSIDIAN & ELECTRIC PURPLE:
+   - Palette coerente con l'interfaccia dell'eseguibile GOptimizer (#8B5CF6, #0A0A10).
+   - Piena compatibilità responsive mobile, tablet e desktop.
+
+------------------------------------------------------------------------
+COME VEDERLO SUBITO SUL TUO PC:
+------------------------------------------------------------------------
+Basta fare doppio clic sul file "index.html" dentro questa cartella!
+Si aprirà automaticamente nel tuo browser preferito (Chrome, Edge, Brave, Opera)
+senza dover installare nulla.
+
+------------------------------------------------------------------------
+COME METTERLO ONLINE GRATIS SUL WEB IN 2 MINUTI:
+------------------------------------------------------------------------
+OPZIONE A (Vercel / Netlify - Consigliata):
+1. Vai su https://vercel.com o https://netlify.com
+2. Trascina semplicemente l'intera cartella "5 - SITO WEB"
+3. Il tuo sito sarà online immediatamente con certificato SSL HTTPS gratuito!
+
+OPZIONE B (GitHub Pages):
+1. Carica i file in un repository GitHub
+2. Attiva GitHub Pages dalle impostazioni del repository.
+
+------------------------------------------------------------------------
+LINK E SVILUPPATORE:
+------------------------------------------------------------------------
+- Sviluppatore / Creatore: Gabryimp
+- Server Discord Ufficiale: https://discord.gg/jHf5BnGDBr
+- Nel file "index.html" puoi impostare se desideri il canale Telegram:
+  "https://t.me/TUO_TELEGRAM"
+========================================================================

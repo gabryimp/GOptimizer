@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G Optimizer 2.0 • Il Vero Tool per Ottimizzare il PC | FiveM, Fortnite & FPS Boost</title>
+    <meta name="description" content="La suite standalone leader per azzerare l'input lag, eliminare lo stuttering e stabilizzare i frametime su FiveM, Fortnite, Valorant e CS2. 100% PC-Check Safe.">
+    <link rel="icon" type="image/x-icon" href="assets/app.ico">
+
+    <!-- Open Graph / Discord Embed -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="G Optimizer 2.0 • Il Vero Tool per Ottimizzare il PC">
+    <meta property="og:description" content="Azzeramento Input Lag, Timer 0.500 ms, MSI Mode e 100% FiveM PC-Check Safe. Sblocca le massime prestazioni del tuo PC.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta name="theme-color" content="#00D2FF">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Gradients -->
+    <div class="ambient-glow glow-cyan"></div>
+    <div class="ambient-glow glow-purple"></div>
+    <div class="ambient-glow glow-blue"></div>
+
+    <!-- Fixed Top Header (Announcement Bar + Navigation) -->
+    <div class="fixed-top-header">
+        <!-- Official Launch Countdown Bar (14 Days) -->
+        <div class="announcement-bar">
+            <div class="announce-inner">
+                <div class="announce-left">
+                    <span class="announce-badge"><span class="pulse-dot"></span> LANCIO TRA 14 GIORNI</span>
+                    <span class="announce-text">🔥 FRA 2 SETTIMANE È TUTTO ON • PRE-ORDER SCONTO 40%</span>
+                </div>
+                <div class="announce-right">
+                    <div class="countdown-timer" id="launchCountdown">
+                        <div class="countdown-unit"><span class="c-val" id="cd-days">14</span><span class="c-lbl">G</span></div>
+                        <span class="c-sep">:</span>
+                        <div class="countdown-unit"><span class="c-val" id="cd-hours">00</span><span class="c-lbl">O</span></div>
+                        <span class="c-sep">:</span>
+                        <div class="countdown-unit"><span class="c-val" id="cd-mins">00</span><span class="c-lbl">M</span></div>
+                        <span class="c-sep">:</span>
+                        <div class="countdown-unit"><span class="c-val" id="cd-secs">00</span><span class="c-lbl">S</span></div>
+                    </div>
+                    <a href="#pricing" class="announce-btn">PRE-ORDINA <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="#" class="brand">
+                    <img src="assets/logo.png" alt="G Optimizer Logo" class="brand-logo">
+                    <div class="brand-text">
+                        <span class="brand-name">G OPTIMIZER</span>
+                        <span class="brand-badge">2.0 PRO</span>
+                    </div>
+                </a>
+
+                <nav class="nav-links">
+                    <a href="#features" class="nav-link">Funzioni</a>
+                    <a href="#games" class="nav-link">Giochi</a>
+                    <a href="#remote" class="nav-link">Dashboard Remota</a>
+                    <a href="#pccheck" class="nav-link">PC-Check Safe</a>
+                    <a href="#tweaks-explorer" class="nav-link">Tweak (130+)</a>
+                    <a href="#pricing" class="nav-link">Prezzi</a>
+                    <a href="#download" class="nav-link">Scarica</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a href="https://discord.gg/jHf5BnGDBr" target="_blank" class="btn btn-discord btn-sm">
+                        <i class="fa-brands fa-discord"></i> Discord
+                    </a>
+                    <a href="#pricing" class="btn btn-primary btn-sm btn-glow">
+                        <span>Pre-Ordina</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mob-link"><i class="fa-solid fa-bolt"></i> Funzionalità</a>
+        <a href="#games" class="mob-link"><i class="fa-solid fa-gamepad"></i> Giochi Ottimizzati</a>
+        <a href="#remote" class="mob-link"><i class="fa-solid fa-mobile-screen"></i> Dashboard Remota (Zero Alt-Tab)</a>
+        <a href="#pccheck" class="mob-link"><i class="fa-solid fa-shield-check"></i> 100% PC-Check Safe (FiveM)</a>
+        <a href="#tweaks-explorer" class="mob-link"><i class="fa-solid fa-sliders"></i> Esplora Tweak (130+)</a>
+        <a href="#comparison" class="mob-link"><i class="fa-solid fa-chart-line"></i> Prima vs Dopo</a>
+        <a href="#calculator" class="mob-link"><i class="fa-solid fa-calculator"></i> Calcolatore FPS</a>
+        <a href="#pricing" class="mob-link"><i class="fa-solid fa-tag"></i> Prezzi & Piani</a>
+        <a href="#download" class="mob-link"><i class="fa-solid fa-download"></i> Scarica Subito (GOptimizer_V2.zip)</a>
+        <a href="#faq" class="mob-link"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+        <a href="https://discord.gg/jHf5BnGDBr" target="_blank" class="btn btn-discord full-w"><i class="fa-brands fa-discord"></i> Unisciti al Discord</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>VERSIONE 2.0 STANDALONE — COMPATIBILE WINDOWS 10 & 11</span>
+            </div>
+
+            <h1 class="hero-title">
+                Azzeramento <span class="gradient-text">Input Lag</span> & <br>
+                FPS Stabili al <span class="gradient-purple">Massimo Livello</span>.
+            </h1>
+
+            <p class="hero-subtitle">
+                La suite standalone definitiva per FiveM, Fortnite, Valorant e CS2. 
+                Ottimizzazione del clock a <strong>0.500 ms nativi</strong>, configurazione automatica <strong>MSI Mode</strong> su GPU e 
+                conformità al <strong>100% per i controlli PC-Check Screenshare</strong> degli staffer.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#pricing" class="btn btn-hero-primary btn-glow">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>SBLOCCA LE PRESTAZIONI ORA</span>
+                </a>
+                <a href="#comparison" class="btn btn-hero-secondary">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Guarda il Confronto FPS</span>
+                </a>
+            </div>
+
+            <!-- Trust Pills -->
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-halved text-cyan"></i>
+                    <span>100% Safe (0 Ban FiveM)</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-stopwatch text-purple"></i>
+                    <span>Timer Lock a 0.500 ms</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-microchip text-cyan"></i>
+                    <span>Hardware MSI GPU Priority</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-lock text-purple"></i>
+                    <span>Nessun File Iniettato</span>
+                </div>
+            </div>
+
+            <!-- Software Preview Mockup -->
+            <div class="mockup-wrapper">
+                <div class="mockup-frame">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="mockup-title">
+                            <i class="fa-solid fa-bolt text-cyan"></i> GOptimizer 2.0 • Standalone Dashboard Suite
+                        </div>
+                        <div class="mockup-badge">KERNEL CLOCK: 0.500 MS</div>
+                    </div>
+                    <div class="mockup-body">
+                        <!-- Dashboard UI Preview -->
+                        <div class="dashboard-preview">
+                            <div class="dash-sidebar">
+                                <div class="dash-item active"><i class="fa-solid fa-gauge-high"></i> Dashboard</div>
+                                <div class="dash-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Profili Smart</div>
+                                <div class="dash-item"><i class="fa-solid fa-list-check"></i> Tweaks (100+)</div>
+                                <div class="dash-item"><i class="fa-solid fa-shield-virus"></i> Audit Screenshare</div>
+                                <div class="dash-item"><i class="fa-solid fa-broom"></i> FiveM Cleaner</div>
+                                <div class="dash-item"><i class="fa-solid fa-network-wired"></i> DNS Benchmark</div>
+                            </div>
+                            <div class="dash-main">
+                                <div class="dash-top-bar">
+                                    <div class="dash-stat-box">
+                                        <span class="stat-lbl">HARDWARE CLOCK</span>
+                                        <span class="stat-val text-cyan">0.500 ms (Lock)</span>
+                                    </div>
+                                    <div class="dash-stat-box">
+                                        <span class="stat-lbl">MSI GPU MODE</span>
+                                        <span class="stat-val text-green">ATTIVO (High)</span>
+                                    </div>
+                                    <div class="dash-stat-box">
+                                        <span class="stat-lbl">AUDIT FIVEM</span>
+                                        <span class="stat-val text-cyan">10/10 SAFE</span>
+                                    </div>
+                                </div>
+                                <div class="dash-center-card">
+                                    <div class="score-circle-preview">
+                                        <div class="circle-inner">
+                                            <span class="circle-num">100%</span>
+                                            <span class="circle-lbl">FORMULA 1</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-cta-box">
+                                        <h3>OTTIMIZZAZIONE 1-CLICK COMPLETA</h3>
+                                        <p>Timer resolution bloccato, priorità I/O giochi a High, TCP NoDelay e Standby RAM ripulita.</p>
+                                        <div class="btn-fake">PRESTAZIONI MASSIME ATTIVE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-col">
+                    <span class="stat-big" data-target="35">+35%</span>
+                    <span class="stat-desc">FPS Medi nei Giochi</span>
+                </div>
+                <div class="stat-col">
+                    <span class="stat-big">-75%</span>
+                    <span class="stat-desc">Input Lag & Latency DPC</span>
+                </div>
+                <div class="stat-col">
+                    <span class="stat-big">0.500</span>
+                    <span class="stat-desc">ms Timer Clock Lock</span>
+                </div>
+                <div class="stat-col">
+                    <span class="stat-big">100%</span>
+                    <span class="stat-desc">PC-Check Safe (FiveM)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Comparison (Before vs After) -->
+    <section class="section comparison-section" id="comparison">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">BENCHMARK REALE SUL CAMPO</span>
+                <h2 class="section-title">Guarda la Differenza nei <span class="gradient-text">Frametime</span></h2>
+                <p class="section-subtitle">
+                    Trascina lo slider per vedere il comportamento reale di Windows stock con stuttering e micro-freeze contro la stabilità perfetta di G Optimizer 2.0.
+                </p>
+            </div>
+
+            <div class="comparison-container">
+                <div class="comparison-slider" id="compareSlider">
+                    <!-- Before View (Stock) -->
+                    <div class="compare-view view-before">
+                        <div class="view-tag tag-before">WINDOWS DEFAULT (STOCK)</div>
+                        <div class="graph-box">
+                            <div class="graph-info">
+                                <span class="graph-fps text-red">68 FPS</span>
+                                <span class="graph-ms text-red">Latenza: 15.6 ms • Micro-Stuttering Continuo</span>
+                            </div>
+                            <!-- Spiky erratic graph -->
+                            <svg class="graph-svg" viewBox="0 0 500 150">
+                                <path d="M0,80 Q30,120 60,40 T120,110 T180,30 T240,130 T300,50 T360,115 T420,45 T480,125 L500,90" fill="none" stroke="#EF4444" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                            <div class="graph-issues">
+                                <span>❌ Timer sballato a 15.6ms</span>
+                                <span>❌ Conflitti interrupt GPU</span>
+                                <span>❌ Memory Standby intasata</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- After View (Optimized) -->
+                    <div class="compare-view view-after" id="afterOverlay">
+                        <div class="view-tag tag-after">CON G OPTIMIZER 2.0</div>
+                        <div class="graph-box">
+                            <div class="graph-info">
+                                <span class="graph-fps text-cyan">144+ FPS STABILI</span>
+                                <span class="graph-ms text-green">Latenza: 0.500 ms • Frametime Perfettamente Piatto</span>
+                            </div>
+                            <!-- Smooth flat frametime graph -->
+                            <svg class="graph-svg" viewBox="0 0 500 150">
+                                <path d="M0,50 Q60,48 120,51 T240,49 T360,50 T480,49 L500,50" fill="none" stroke="#00D2FF" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                            <div class="graph-issues">
+                                <span class="text-cyan">✔ Timer forzato a 0.500ms</span>
+                                <span class="text-cyan">✔ Priorità MSI High su GPU</span>
+                                <span class="text-cyan">✔ Flush istantaneo Standby RAM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Handle -->
+                    <div class="slider-handle" id="sliderHandle">
+                        <div class="handle-line"></div>
+                        <div class="handle-button">
+                            <i class="fa-solid fa-arrows-left-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Killer Features Section -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">TECNOLOGIA AL KERNEL</span>
+                <h2 class="section-title">Perché G Optimizer 2.0 è il <span class="gradient-text">Numero Uno</span></h2>
+                <p class="section-subtitle">Nessun file spazzatura, nessun cheat e nessuna modifica che ti fa bannare. Solo ottimizzazioni hardware native pulite.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box cyan-glow">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="feat-title">Hardware Timer Resolution 0.500 ms</h3>
+                    <p class="feat-desc">
+                        Forza il clock del processore dal valore stock di 15.6 ms al limite hardware minimo di <strong>0.500 ms</strong> via chiamate native Kernel P/Invoke. Risposta del puntatore mouse istantanea.
+                    </p>
+                    <span class="feat-badge text-cyan">KERNEL P/INVOKE</span>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box purple-glow">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="feat-title">Smart Auto-Boost</h3>
+                    <p class="feat-desc">
+                        Resta silenzioso nella tray. Rileva istantaneamente l'avvio di FiveM, Fortnite, Valorant o CS2, imposta la priorità High, svuota la RAM e passa al Mini-HUD in sovrimpressione.
+                    </p>
+                    <span class="feat-badge text-purple">100% AUTOMATICO</span>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box green-glow">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="feat-title">100% FiveM PC-Check Safe</h3>
+                    <p class="feat-desc">
+                        A differenza degli optimizer scadenti, G Optimizer <strong>preserva i 10 servizi obbligatori</strong> (DPS, BAM, DiagTrack, EventLog). Gli scanner degli staffer (Echo, Devour) danno esito verde al 100%.
+                    </p>
+                    <span class="feat-badge text-green">SCRENSHARE CERTIFIED</span>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box cyan-glow">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="feat-title">MSI Mode Hardware Manager</h3>
+                    <p class="feat-desc">
+                        Attiva il supporto Message Signaled Interrupts (MSI) e assegna priorità High su Scheda Video (GPU), Scheda di Rete e controller USB, azzerando i conflitti di interrupt IRQ.
+                    </p>
+                    <span class="feat-badge text-cyan">PCI-EXPRESS LATENCY</span>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box purple-glow">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="feat-title">FiveM & Shader Cleaner</h3>
+                    <p class="feat-desc">
+                        Pulisce in 1 solo clic le cartelle cache di FiveM (server-cache, priv) e i log di crash senza toccare le impostazioni grafiche e senza corrompere i server preferiti.
+                    </p>
+                    <span class="feat-badge text-purple">1-CLICK CLEAN</span>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box green-glow">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="feat-title">DNS Benchmark & Ping Optimizer</h3>
+                    <p class="feat-desc">
+                        Esegue un benchmark in tempo reale su Cloudflare, Google e Quad9. Applica con 1 clic il resolver DNS più veloce sulle schede di rete attive via chiamate Netsh native.
+                    </p>
+                    <span class="feat-badge text-green">PING MINIMO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Library Showcase Section -->
+    <section class="section games-section" id="games">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="fa-solid fa-gamepad"></i> PRESET COMPETITIVI ESCLUSIVI</span>
+                <h2 class="section-title">Ottimizzazione Su Misura per i <span class="gradient-text">Tuoi Giochi</span></h2>
+                <p class="section-subtitle">Profili hardware e software dedicati. Nessun compromesso sulla grafica: solo massimi frame per secondo e risposta ai comandi istantanea.</p>
+            </div>
+
+            <div class="games-grid">
+                <!-- FiveM -->
+                <div class="game-card">
+                    <div class="game-poster-wrap">
+                        <img src="assets/cover_fivem.png" alt="FiveM Cover" class="game-poster-img" loading="lazy">
+                        <div class="game-poster-overlay">
+                            <span class="game-top-badge badge-green"><i class="fa-solid fa-shield-check"></i> 100% PC-CHECK SAFE</span>
+                            <div class="game-floating-stats">
+                                <span class="g-stat-chip text-green">+45-65 FPS</span>
+                                <span class="g-stat-chip text-cyan">0.500 ms</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div>
+                            <h3 class="game-title">FiveM • GTA V</h3>
+                            <p class="game-desc">Elimina i cali di frame a Legion Square e durante le sparatorie veloci tra veicoli su server pesanti.</p>
+                            <ul class="game-features-list">
+                                <li><i class="fa-solid fa-check"></i> Texture Memory Pool x2</li>
+                                <li><i class="fa-solid fa-check"></i> Pulizia Cache & Crash Dump</li>
+                                <li><i class="fa-solid fa-check"></i> 0 Ban Screenshare (Echo/Devour)</li>
+                            </ul>
+                        </div>
+                        <a href="#calculator" class="btn btn-outline full-w" style="font-size: 0.8rem; padding: 8px;"><i class="fa-solid fa-calculator"></i> Calcola FPS</a>
+                    </div>
+                </div>
+
+                <!-- Fortnite -->
+                <div class="game-card">
+                    <div class="game-poster-wrap">
+                        <img src="assets/cover_fortnite.png" alt="Fortnite Cover" class="game-poster-img" loading="lazy">
+                        <div class="game-poster-overlay">
+                            <span class="game-top-badge badge-purple"><i class="fa-solid fa-bolt"></i> ZERO INPUT LAG</span>
+                            <div class="game-floating-stats">
+                                <span class="g-stat-chip text-green">+60-85 FPS</span>
+                                <span class="g-stat-chip text-purple">-76% Delay</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div>
+                            <h3 class="game-title">Fortnite (OG & C5)</h3>
+                            <p class="game-desc">Build fight fluidi e sub-tick delay per posizionare muri e scale istantaneamente senza freeze negli end-game.</p>
+                            <ul class="game-features-list">
+                                <li><i class="fa-solid fa-check"></i> Timer Lock 0.500 ms Kernel</li>
+                                <li><i class="fa-solid fa-check"></i> Priorità Processo Unreal High</li>
+                                <li><i class="fa-solid fa-check"></i> Stabilizzazione Frametime 240Hz</li>
+                            </ul>
+                        </div>
+                        <a href="#calculator" class="btn btn-outline full-w" style="font-size: 0.8rem; padding: 8px;"><i class="fa-solid fa-calculator"></i> Calcola FPS</a>
+                    </div>
+                </div>
+
+                <!-- Counter-Strike 2 -->
+                <div class="game-card">
+                    <div class="game-poster-wrap">
+                        <img src="assets/cover_cs2.png" alt="CS2 Cover" class="game-poster-img" loading="lazy">
+                        <div class="game-poster-overlay">
+                            <span class="game-top-badge badge-cyan"><i class="fa-solid fa-crosshairs"></i> SUB-TICK ACCURACY</span>
+                            <div class="game-floating-stats">
+                                <span class="g-stat-chip text-green">+50-70 FPS</span>
+                                <span class="g-stat-chip text-cyan">-80% Delay</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div>
+                            <h3 class="game-title">Counter-Strike 2</h3>
+                            <p class="game-desc">Registrazione colpi 1:1 sub-tick perfetta. Azzeramento DPC latency spikes su scheda audio e mouse.</p>
+                            <ul class="game-features-list">
+                                <li><i class="fa-solid fa-check"></i> MSI Mode GPU Interrupt</li>
+                                <li><i class="fa-solid fa-check"></i> TCP NoDelay & MTU Boost</li>
+                                <li><i class="fa-solid fa-check"></i> DWM Double-Buffer bypass</li>
+                            </ul>
+                        </div>
+                        <a href="#calculator" class="btn btn-outline full-w" style="font-size: 0.8rem; padding: 8px;"><i class="fa-solid fa-calculator"></i> Calcola FPS</a>
+                    </div>
+                </div>
+
+                <!-- Valorant -->
+                <div class="game-card">
+                    <div class="game-poster-wrap">
+                        <img src="assets/cover_valorant.png" alt="Valorant Cover" class="game-poster-img" loading="lazy">
+                        <div class="game-poster-overlay">
+                            <span class="game-top-badge badge-gold"><i class="fa-solid fa-shield-halved"></i> VANGUARD COMPLIANT</span>
+                            <div class="game-floating-stats">
+                                <span class="g-stat-chip text-green">+55-80 FPS</span>
+                                <span class="g-stat-chip text-purple">-75% Delay</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div>
+                            <h3 class="game-title">Valorant</h3>
+                            <p class="game-desc">Flick precisi e massima stabilità con Riot Vanguard attivo. Nessuna modifica non certificata.</p>
+                            <ul class="game-features-list">
+                                <li><i class="fa-solid fa-check"></i> Raw Input Smoothing Off</li>
+                                <li><i class="fa-solid fa-check"></i> Win32PrioritySeparation 26</li>
+                                <li><i class="fa-solid fa-check"></i> Zero Ban Riot Vanguard</li>
+                            </ul>
+                        </div>
+                        <a href="#calculator" class="btn btn-outline full-w" style="font-size: 0.8rem; padding: 8px;"><i class="fa-solid fa-calculator"></i> Calcola FPS</a>
+                    </div>
+                </div>
+
+                <!-- Warzone -->
+                <div class="game-card">
+                    <div class="game-poster-wrap">
+                        <img src="assets/cover_warzone.jpg" alt="Warzone Cover" class="game-poster-img" loading="lazy">
+                        <div class="game-poster-overlay">
+                            <span class="game-top-badge badge-purple"><i class="fa-solid fa-memory"></i> STANDBY RAM FLUSH</span>
+                            <div class="game-floating-stats">
+                                <span class="g-stat-chip text-green">+35-50 FPS</span>
+                                <span class="g-stat-chip text-purple">Zero Drops</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div>
+                            <h3 class="game-title">Call of Duty: Warzone</h3>
+                            <p class="game-desc">Elimina lo stuttering improvviso dopo 30 minuti di gioco liberando la memoria Standby in background.</p>
+                            <ul class="game-features-list">
+                                <li><i class="fa-solid fa-check"></i> Standby List Auto-Flush</li>
+                                <li><i class="fa-solid fa-check"></i> Texture Streaming Pipeline</li>
+                                <li><i class="fa-solid fa-check"></i> Priorità I/O Disco Alta</li>
+                            </ul>
+                        </div>
+                        <a href="#calculator" class="btn btn-outline full-w" style="font-size: 0.8rem; padding: 8px;"><i class="fa-solid fa-calculator"></i> Calcola FPS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remote Web Dashboard & Zero Alt-Tab Section -->
+    <section class="section remote-section" id="remote">
+        <div class="container">
+            <div class="remote-grid">
+                <div class="remote-text-col">
+                    <span class="section-tag"><i class="fa-solid fa-mobile-screen"></i> ESCLUSIVA G OPTIMIZER 2.0</span>
+                    <h2 class="section-title">Controlla il Tuo PC dal Tuo Smartphone <br><span class="gradient-text">Zero Alt-Tab. Zero Lag.</span></h2>
+                    <p class="section-subtitle" style="margin: 0; text-align: left;">
+                        Uscire dal gioco con Alt-Tab provoca cali di framerate, crash del motore grafico e perdita di concentrazione nei match ranked. 
+                        Con la <strong>Dashboard Remota Web</strong> integrata in G Optimizer, puoi monitorare l'hardware e attivare i boost direttamente dallo schermo del tuo telefono o tablet sulla rete WiFi locale.
+                    </p>
+
+                    <div class="remote-perks-list">
+                        <div class="remote-perk-card">
+                            <div class="remote-perk-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                            <div class="remote-perk-content">
+                                <h4>Nessun Overlay Pesante a Schermo</h4>
+                                <p>Non sporcare il tuo campo visivo con barre FPS invasive che consumano preziose risorse GPU durante i fight.</p>
+                            </div>
+                        </div>
+
+                        <div class="remote-perk-card">
+                            <div class="remote-perk-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                            <div class="remote-perk-content">
+                                <h4>100% Anti-Cheat Safe</h4>
+                                <p>Gli anti-cheat considerano sospetti gli hook di rendering overlay. La dashboard remota gira su WebSocket locale e non tocca la memoria video del gioco.</p>
+                            </div>
+                        </div>
+
+                        <div class="remote-perk-card">
+                            <div class="remote-perk-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div class="remote-perk-content">
+                                <h4>1-Click Quick Flush dal Telefono</h4>
+                                <p>Tocca un pulsante sul cellulare mentre sei in attesa o in lobby per liberare istantaneamente la RAM Standby e preparare il PC al prossimo round.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Smartphone Live Mockup -->
+                <div class="mockup-phone-container">
+                    <div class="phone-device">
+                        <div class="phone-notch">
+                            <div class="phone-camera"></div>
+                        </div>
+                        <div class="phone-screen">
+                            <div class="phone-top-bar">
+                                <span style="font-weight: 700;">14:30</span>
+                                <div class="phone-live-indicator">
+                                    <span class="pulse-dot"></span>
+                                    <span>CONNESSO</span>
+                                </div>
+                            </div>
+
+                            <div class="phone-header-brand">
+                                <div class="phone-brand-title">G OPTIMIZER REMOTE</div>
+                                <div class="phone-brand-sub">DESKTOP-GAMING • 192.168.1.104</div>
+                            </div>
+
+                            <div class="phone-stats-grid">
+                                <div class="phone-stat-box">
+                                    <span class="phone-stat-lbl">IN-GAME FPS</span>
+                                    <span class="phone-stat-num text-green" id="phoneFps">165 FPS</span>
+                                </div>
+                                <div class="phone-stat-box">
+                                    <span class="phone-stat-lbl">TIMER CLOCK</span>
+                                    <span class="phone-stat-num text-cyan">0.500 ms</span>
+                                </div>
+                                <div class="phone-stat-box">
+                                    <span class="phone-stat-lbl">TEMPERATURA GPU</span>
+                                    <span class="phone-stat-num text-purple" id="phoneTemp">59°C</span>
+                                </div>
+                                <div class="phone-stat-box">
+                                    <span class="phone-stat-lbl">USO RAM</span>
+                                    <span class="phone-stat-num text-gold" id="phoneRam">38%</span>
+                                </div>
+                            </div>
+
+                            <div class="phone-action-card">
+                                <div style="font-size: 0.75rem; color: #CBD5E1; font-weight: 600;">PROFILO ATTIVO: <span class="text-cyan">FORMULA 1</span></div>
+                                <button class="phone-action-btn" id="phoneCleanBtn" onclick="simulatePhoneClean()">
+                                    <i class="fa-solid fa-broom"></i>
+                                    <span id="phoneCleanText">Pulisci RAM Standby Ora</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FiveM PC-Check Compliance & Screenshare Audit Section -->
+    <section class="section pccheck-section" id="pccheck">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="fa-solid fa-shield-check"></i> AUDIT SCREENSHARE CERTIFIED</span>
+                <h2 class="section-title">100% PC-Check Safe per <span class="gradient-text">FiveM</span></h2>
+                <p class="section-subtitle">
+                    A differenza degli optimizer amatoriali che disabilitano servizi critici causando ban istantanei dagli staffer (Echo, Devour, Ocean), 
+                    G Optimizer 2.0 preserva i registri di sistema e garantisce un controllo 10 su 10 totalmente pulito.
+                </p>
+            </div>
+
+            <div class="pccheck-box">
+                <div class="pccheck-table-wrap">
+                    <table class="pccheck-table">
+                        <thead>
+                            <tr>
+                                <th>Parametro di Controllo Staffer (Echo / Devour)</th>
+                                <th>Optimizer Scadenti da YouTube/Discord</th>
+                                <th>G Optimizer 2.0 Standalone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DPS (Diagnostic Policy Service)</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> Spento / Disattivato (BAN)</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> 100% Attivo & Integro (PASS)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>BAM (Background Activity Moderator)</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> Chiavi Registro Eliminate (BAN)</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> Preservato & Conforme (PASS)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prefetch & SysMain Windows</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> File Corrotti / Disabilitati</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> Gestione Nativa Sicura (PASS)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Windows EventLog & Crash Logs</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> Svuotati (Sospetto occultamento)</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> Registro Eventi Intatto (PASS)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>DLL Injection / Hook nei Processi</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> Rilevati come Cheat/Ghost</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> ZERO INIEZIONE • 100% Pulito (PASS)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Timer Resolution Kernel</strong></td>
+                                <td><span class="status-badge-ban"><i class="fa-solid fa-circle-xmark"></i> Tool esterni instabili e buggati</span></td>
+                                <td><span class="status-badge-safe"><i class="fa-solid fa-circle-check"></i> 0.500 ms Kernel P/Invoke (PASS)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pccheck-cards-grid">
+                    <div class="pccheck-mini-card">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <div>
+                            <h5>Conforme a Echo & Devour</h5>
+                            <p>Testato sui controlli screenshare dei server FiveM più severi d'Italia. Zero falsi positivi.</p>
+                        </div>
+                    </div>
+                    <div class="pccheck-mini-card">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <div>
+                            <h5>Punto di Ripristino Automatico</h5>
+                            <p>Crea automaticamente un punto di ripristino di sistema prima di applicare modifiche sostanziali.</p>
+                        </div>
+                    </div>
+                    <div class="pccheck-mini-card">
+                        <i class="fa-solid fa-file-shield"></i>
+                        <div>
+                            <h5>Nessuna Installazione o Servizio</h5>
+                            <p>G Optimizer è un singolo file .exe standalone. Quando lo chiudi, non lascia processi residenti né residui.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tweaks Explorer Section -->
+    <section class="section tweaks-section" id="tweaks-explorer">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="fa-solid fa-sliders"></i> PIÙ DI 130 TWEAKS DISPONIBILI</span>
+                <h2 class="section-title">Esplora il Catalogo dei <span class="gradient-text">Nostri Tweak</span></h2>
+                <p class="section-subtitle">Ogni tweak è documentato e testato per la massima stabilità. Cerca per nome o filtra per categoria hardware.</p>
+            </div>
+
+            <div class="tweak-controls">
+                <div class="tweak-search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="tweakSearchInput" class="tweak-search-box" placeholder="Cerca tweak (es. MSI, Timer, RAM, DNS, Cache, Latency...)">
+                </div>
+
+                <div class="tweak-filter-pills" id="tweakPills">
+                    <button class="filter-pill active" data-cat="all">🌟 Tutti (130+)</button>
+                    <button class="filter-pill" data-cat="cpu">⚡ CPU & Latenza (28)</button>
+                    <button class="filter-pill" data-cat="gpu">🎮 GPU & Display (24)</button>
+                    <button class="filter-pill" data-cat="net">🌐 Rete & Ping (18)</button>
+                    <button class="filter-pill" data-cat="ram">🧹 RAM & Pulizia (32)</button>
+                    <button class="filter-pill" data-cat="fivem">🚓 FiveM & Anti-Cheat (16)</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Tweaks Grid Container -->
+            <div class="tweak-cards-grid" id="tweakGrid">
+                <!-- Injected dynamically via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Latency & FPS Calculator -->
+    <section class="section calculator-section" id="calculator">
+        <div class="container">
+            <div class="calculator-card">
+                <div class="calc-header text-center">
+                    <span class="section-tag">STIMA IN TEMPO REALE</span>
+                    <h2 class="section-title">Calcola il Guadagno sul <span class="gradient-text">Tuo PC</span></h2>
+                    <p class="section-subtitle">Seleziona il tuo gioco principale e la tua scheda grafica per calcolare la riduzione di latenza stimata.</p>
+                </div>
+
+                <div class="calc-body">
+                    <div class="calc-inputs">
+                        <div class="calc-group">
+                            <label class="calc-label"><i class="fa-solid fa-gamepad text-cyan"></i> Seleziona Gioco</label>
+                            <select id="calcGame" class="calc-select">
+                                <option value="fivem" selected>GTA 5 / FiveM (Roleplay & Sparatorie)</option>
+                                <option value="fortnite">Fortnite (Build Fights & End-game)</option>
+                                <option value="cs2">Counter-Strike 2 (Sub-Tick Latency)</option>
+                                <option value="valorant">Valorant (Vanguard & Low Latency)</option>
+                                <option value="warzone">Call of Duty: Warzone</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-group">
+                            <label class="calc-label"><i class="fa-solid fa-microchip text-purple"></i> Scheda Grafica (GPU)</label>
+                            <select id="calcGpu" class="calc-select">
+                                <option value="rtx40" selected>NVIDIA GeForce RTX Serie 40 (4060, 4070, 4080, 4090)</option>
+                                <option value="rtx30">NVIDIA GeForce RTX Serie 30 (3060, 3070, 3080, 3090)</option>
+                                <option value="rtx20">NVIDIA GeForce RTX Serie 20 / GTX 16xx</option>
+                                <option value="amd">AMD Radeon RX 6000 / 7000 Series</option>
+                                <option value="gtx">GTX 1060 / 1070 / 1080 / Altro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <div class="res-box">
+                            <span class="res-title">FPS Medi Stimati</span>
+                            <span class="res-val text-green" id="resFps">+35 - 55 FPS</span>
+                            <span class="res-note">Zero cali a Legion Square</span>
+                        </div>
+                        <div class="res-box">
+                            <span class="res-title">Latenza Input / Click</span>
+                            <span class="res-val text-cyan" id="resDelay">-68% Delay</span>
+                            <span class="res-note">Clock portato a 0.500 ms</span>
+                        </div>
+                        <div class="res-box">
+                            <span class="res-title">Stabilità Frametime</span>
+                            <span class="res-val text-purple" id="resStability">99.4% Flat</span>
+                            <span class="res-note">Eliminati tutti i micro-freeze</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">LISTINO UFFICIALE</span>
+                <h2 class="section-title">Scegli il Tuo Piano di <span class="gradient-text">Ottimizzazione</span></h2>
+                <p class="section-subtitle">Attivazione diretta e immediata. Pagamento sicuro e licenza personale legata al tuo HWID senza attese.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Tier 1: 1 Mese -->
+                <div class="price-card">
+                    <div class="tier-badge">PIANO STARTER</div>
+                    <h3 class="tier-name">1 Mese</h3>
+                    <div class="price-val">5.99€ <span class="price-period">/ 30 giorni</span></div>
+                    <p class="tier-desc">Perfetto per testare la suite e azzerare l'input lag durante i tuoi tornei.</p>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-check text-cyan"></i> Timer Resolution 0.500 ms</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Smart Auto-Boost Background</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> FiveM Safe (100% PC-Check)</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> MSI Mode GPU & Rete</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Aggiornamenti per 30 giorni</li>
+                    </ul>
+
+                    <button class="btn btn-outline full-w" onclick="openCheckout('1M', '5.99€')">
+                        <i class="fa-solid fa-cart-shopping"></i> Acquista 1 Mese
+                    </button>
+                </div>
+
+                <!-- Tier 2: 3 Mesi -->
+                <div class="price-card popular">
+                    <div class="ribbon">MIGLIOR RAPPORTO</div>
+                    <div class="tier-badge text-purple">PIANO PRO</div>
+                    <h3 class="tier-name">3 Mesi</h3>
+                    <div class="price-val">15.00€ <span class="price-period">/ 90 giorni</span></div>
+                    <p class="tier-desc">Risparmi il 17% rispetto al mensile con tre mesi di massime prestazioni continue.</p>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-check text-purple"></i> Tutte le funzioni del piano 1 Mese</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Assistenza Prioritaria Dedicata</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> 1 Reset HWID Gratuito Incluso</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Aggiornamenti per 90 giorni</li>
+                    </ul>
+
+                    <button class="btn btn-primary btn-glow full-w" onclick="openCheckout('3M', '15.00€')">
+                        <i class="fa-solid fa-cart-shopping"></i> Acquista 3 Mesi
+                    </button>
+                </div>
+
+                <!-- Tier 3: Lifetime -->
+                <div class="price-card vip">
+                    <div class="ribbon gold-ribbon">👑 PIÙ VENDUTO</div>
+                    <div class="tier-badge text-gold">ACCESSO ILLIMITATO</div>
+                    <h3 class="tier-name">Lifetime (A Vita)</h3>
+                    <div class="price-val">25.00€ <span class="price-period">/ una tantum</span></div>
+                    <p class="tier-desc">Paga una volta sola e possiedi G Optimizer per sempre, con tutti gli aggiornamenti futuri.</p>
+                    
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-crown text-gold"></i> <strong>Licenza a Vita Senza Scadenze</strong></li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Tutti i futuri aggiornamenti gratuiti</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Reset HWID illimitati per cambio PC</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Accesso VIP Prioritario</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Supporto Diretto Dedicato 24/7</li>
+                    </ul>
+
+                    <button class="btn btn-gold btn-glow full-w" onclick="openCheckout('LIFE', '25.00€')">
+                        <i class="fa-solid fa-crown"></i> Acquista Lifetime
+                    </button>
+                </div>
+            </div>
+
+            <!-- Free Trial Callout -->
+            <div class="trial-banner">
+                <div class="trial-info">
+                    <span class="trial-tag">🎁 VUOI TESTARLO PRIMA?</span>
+                    <h4>Prova Gratuita di 24 Ore Disponibile!</h4>
+                    <p>Entra nel nostro Discord ufficiale e digita <code>/prova_gratuita</code> per ricevere una licenza test di 24 ore istantanea!</p>
+                </div>
+                <a href="https://discord.gg/jHf5BnGDBr" target="_blank" class="btn btn-discord btn-trial">
+                    <i class="fa-brands fa-discord"></i> Richiedi Prova 24h
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Download Box Section -->
+    <section class="section download-section" id="download">
+        <div class="container">
+            <div class="download-section-box">
+                <div class="download-cta-inner">
+                    <span class="section-tag"><i class="fa-solid fa-download"></i> BUILD STANDALONE UFFICIALE</span>
+                    <h2 class="section-title" style="margin-bottom: 12px;">Scarica <span class="gradient-text">G Optimizer 2.0</span></h2>
+                    <p class="section-subtitle" style="font-size: 1.05rem;">
+                        Nessun installer, nessun bloatware e nessuna registrazione obbligatoria. 
+                        Scarica l'archivio ZIP pronto all'uso, estrailo sul desktop ed esegui <code>GOptimizer.exe</code>.
+                    </p>
+
+                    <div class="download-meta-badges">
+                        <span class="dl-badge"><i class="fa-brands fa-windows text-cyan"></i> Windows 10 & 11 (64-bit)</span>
+                        <span class="dl-badge"><i class="fa-solid fa-file-zipper text-purple"></i> Versione 2.0.0 Standalone</span>
+                        <span class="dl-badge"><i class="fa-solid fa-box text-gold"></i> Dimensione: ~9.2 MB</span>
+                        <span class="dl-badge"><i class="fa-solid fa-shield-check text-green"></i> VirusTotal: 100% Clean</span>
+                    </div>
+
+                    <a href="GOptimizer_V2.zip" download class="btn-big-download">
+                        <i class="fa-solid fa-download"></i>
+                        <span>SCARICA GOPTIMIZER_V2.ZIP</span>
+                    </a>
+
+                    <div class="download-quicksteps">
+                        <div class="step-card">
+                            <div class="step-num">STEP 1</div>
+                            <h4 class="step-title">Scarica ed Estrai</h4>
+                            <p class="step-desc">Scarica il pacchetto ZIP ed estrai la cartella sul tuo Desktop o dove preferisci.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">STEP 2</div>
+                            <h4 class="step-title">Avvia GOptimizer.exe</h4>
+                            <p class="step-desc">Avvia il software (se richiesto clicca "Ulteriori informazioni" > "Esegui comunque").</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">STEP 3</div>
+                            <h4 class="step-title">Attiva Formula 1</h4>
+                            <p class="step-desc">Seleziona il profilo FORMULA 1 per applicare tutti i tweak di latenza e timer in 1 secondo!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Vouch Section -->
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">FEEDBACK VERIFICATI</span>
+                <h2 class="section-title">Cosa Dicono i Nostri <span class="gradient-text">Clienti</span></h2>
+                <p class="section-subtitle">Recensioni reali raccolte sul nostro server Discord ufficiale tramite il comando /vouch.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">
+                        "Giocavo su FiveM a 55 FPS con continui micro-scatti nelle sparatorie. Dopo aver aperto G Optimizer e applicato il profilo FiveM Safe ho fatto 110 FPS costanti e il mouse sembra incollato alla mano. Straconsigliato!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="author-meta">
+                            <span class="author-name">Marco 'Kevlar'</span>
+                            <span class="author-badge text-cyan"><i class="fa-solid fa-circle-check"></i> Cliente Verificato (Lifetime)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">
+                        "Ero scettico per i PC-Check FiveM perché in passato mi avevano bannato per optimizer con i servizi spenti. Ieri ho fatto il controllo screenshare dallo staffer: 10 su 10 verde, zero avvisi. Top assoluto."
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="author-meta">
+                            <span class="author-name">Federico V.</span>
+                            <span class="author-badge text-cyan"><i class="fa-solid fa-circle-check"></i> Cliente Verificato (3 Mesi)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">
+                        "Il Timer Resolution a 0.500 ms e l'MSI mode sulla GPU mi hanno cambiato completamente il feeling su Fortnite e CS2. Non esiste nessun tool gratis o a pagamento fatto così bene e leggero."
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar"><i class="fa-solid fa-crosshairs"></i></div>
+                        <div class="author-meta">
+                            <span class="author-name">Lorenzo 'Apex'</span>
+                            <span class="author-badge text-cyan"><i class="fa-solid fa-circle-check"></i> Cliente Verificato (Lifetime)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">DUBBI FREQUENTI</span>
+                <h2 class="section-title">Domande <span class="gradient-text">Frequenti (FAQ)</span></h2>
+                <p class="section-subtitle">Tutto quello che c'è da sapere su sicurezza, funzionamento e licenze.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Cosa fa esattamente G Optimizer 2.0?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Il software applica ottimizzazioni a livello di Kernel Windows: forza il timer di sistema a 0.500 ms (anziché 15.6 ms), attiva l'MSI Mode con priorità High su GPU e Scheda di Rete, ottimizza i buffer TCP/IP, ripulisce la Standby List della RAM e applica curve lineari per mouse e tastiera, eliminando micro-stuttering e input lag.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso essere bannato su FiveM o durante i PC-Check degli Staffer?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>ASSOLUTAMENTE NO.</strong> G Optimizer 2.0 preserva integralmente i 10 servizi obbligatori di Windows (DPS, DiagTrack, EventLog, SysMain, BAM, ecc.) che i tool screenshare (Echo, Devour) controllano. Non inietta alcun file nel processo di gioco ed è sicuro al 100%.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Perché Windows SmartScreen mostra un avviso al primo avvio?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Essendo un software standalone appena compilato e privo del costoso certificato annuale Microsoft EV ($400/anno), Windows SmartScreen mostra un avviso di sicurezza preventivo. Basta cliccare su <em>"Ulteriori informazioni"</em> e poi su <em>"Esegui comunque"</em>. Il programma è pulito al 100%.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Come funziona l'attivazione della Licenza e l'HWID?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Quando apri il software scaricato, visualizzerai il tuo codice univoco HWID (Hardware ID). Ti basta aprire un ticket nel nostro server Discord e incollare il tuo HWID: il nostro staff o il bot verificheranno il pagamento e ti consegneranno istantaneamente la chiave licenza personalizzata per il tuo PC.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Se cambio computer o formatto, perdo la licenza?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! Ti basta aprire un ticket nel nostro Discord indicando la prova d'acquisto e il nuovo codice HWID del tuo computer: ti verrà generata e inviata immediatamente la nuova chiave licenza gratuita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand">
+                    <img src="assets/logo.png" alt="G Optimizer Logo" class="brand-logo">
+                    <span class="brand-name">G OPTIMIZER 2.0</span>
+                </div>
+                <p class="footer-desc">Il vero tool per ottimizzare il PC di Gabryimp. Massime prestazioni, zero latenza e conformità 100% garantita.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigazione</h4>
+                <a href="#features">Funzionalità</a>
+                <a href="#games">Giochi Ottimizzati</a>
+                <a href="#remote">Dashboard Remota</a>
+                <a href="#pccheck">PC-Check Safe FiveM</a>
+                <a href="#tweaks-explorer">Catalogo Tweak (130+)</a>
+                <a href="#comparison">Confronto FPS</a>
+                <a href="#pricing">Listino Prezzi</a>
+                <a href="#download">Scarica Subito</a>
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Community & Assistenza</h4>
+                <a href="https://discord.gg/jHf5BnGDBr" target="_blank"><i class="fa-brands fa-discord"></i> Server Discord</a>
+                <a href="https://t.me/TUO_TELEGRAM" target="_blank"><i class="fa-brands fa-telegram"></i> Canale Telegram</a>
+                <a href="https://discord.gg/jHf5BnGDBr" target="_blank"><i class="fa-solid fa-headset"></i> Assistenza & Ticket</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 G Optimizer di Gabryimp. Tutti i diritti riservati.</p>
+            <p class="footer-tagline">Progettato per i gamer più esigenti.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Checkout Modal -->
+    <div class="modal-backdrop" id="checkoutModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeCheckout()">&times;</button>
+            <div class="modal-header">
+                <span class="section-tag" id="modalPlanBadge">PIANO SELEZIONATO</span>
+                <h3 class="modal-title" id="modalPlanTitle">Ordina Licenza G Optimizer</h3>
+                <div class="modal-price" id="modalPlanPrice">25.00€</div>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-instruction text-center">
+                    Per completare l'ordine e ricevere la tua licenza in meno di 2 minuti, <strong>apri un ticket sul nostro server Discord</strong> con il tuo metodo di pagamento preferito.
+                </p>
+
+                <!-- Supported Payment Methods -->
+                <div class="pay-methods-header" style="margin-top: 16px; margin-bottom: 6px;">
+                    <span class="stat-lbl" style="font-size: 0.75rem;"><i class="fa-solid fa-wallet text-cyan"></i> METODI DI PAGAMENTO SUPPORTATI:</span>
+                </div>
+
+                <div class="payment-methods-grid">
+                    <div class="pay-method-pill">
+                        <i class="fa-brands fa-paypal text-cyan"></i>
+                        <span>PayPal (Amici / Beni)</span>
+                    </div>
+                    <div class="pay-method-pill">
+                        <i class="fa-solid fa-bolt text-purple"></i>
+                        <span>Revolut (Revtag)</span>
+                    </div>
+                    <div class="pay-method-pill">
+                        <i class="fa-solid fa-building-columns text-green"></i>
+                        <span>Bonifico / Postepay</span>
+                    </div>
+                    <div class="pay-method-pill">
+                        <i class="fa-solid fa-ticket text-gold"></i>
+                        <span>Paysafecard (PIN)</span>
+                    </div>
+                    <div class="pay-method-pill">
+                        <i class="fa-brands fa-bitcoin text-gold"></i>
+                        <span>Crypto (USDT / LTC / BTC)</span>
+                    </div>
+                    <div class="pay-method-pill">
+                        <i class="fa-solid fa-credit-card text-cyan"></i>
+                        <span>Carte di Credito / Bancomat</span>
+                    </div>
+                </div>
+
+                <!-- Open Ticket Button -->
+                <div class="pay-order-box">
+                    <p>Clicca qui sotto per entrare nel Discord e aprire il ticket di acquisto:</p>
+                    <a href="https://discord.gg/jHf5BnGDBr" target="_blank" class="btn btn-discord full-w btn-glow" style="padding: 15px; font-size: 1.05rem;">
+                        <i class="fa-brands fa-discord"></i> Apri Ticket su Discord per Ordinare
+                    </a>
+                </div>
+
+                <!-- Instant Tool Download -->
+                <a href="GOptimizer_V2.zip" download class="btn btn-outline full-w" style="font-size: 0.88rem;">
+                    <i class="fa-solid fa-download"></i> Scarica Subito il Tool (GOptimizer_V2.zip)
+                </a>
+
+                <div class="modal-footer-info" style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 14px;">
+                    <i class="fa-solid fa-shield-halved text-cyan"></i> Consegna rapida & Convalida HWID in tempo reale
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
